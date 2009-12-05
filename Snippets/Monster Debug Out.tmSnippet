@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>MonsterDebugger.trace(this, $1);</string>
+	<key>name</key>
+	<string>Monster Debug Out</string>
+	<key>scope</key>
+	<string>source.actionscript.3</string>
+	<key>tabTrigger</key>
+	<string>monster</string>
+	<key>uuid</key>
+	<string>0817342B-ED27-49DC-B973-8935132B952E</string>
+</dict>
+</plist>

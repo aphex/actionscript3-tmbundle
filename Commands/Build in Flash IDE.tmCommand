@@ -13,11 +13,12 @@ tell application \"Adobe Flash CS4\"
 	activate
 end tell"
 
+sleep .3
 #hackery to cause spaces to move to the flash window
 osascript -e "tell application \"System Events\" to key code 118";
-sleep .4;
+sleep .5;
 osascript -e "tell application \"System Events\" to key code 118";
-sleep .4;
+sleep .1;
 
 #create a JSFL to test the movie
 echo "flash.getDocumentDOM().testMovie()" &gt; /tmp/test.jsfl;

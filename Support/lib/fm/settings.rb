@@ -86,6 +86,17 @@ module FlexMate
       return nil
     end
     
+    # Determines if a custom compiler config has been specified, if so it will be added to the 
+    # compile.
+    # 
+    def flex_config
+      proj_dir = proj_root
+      unless ENV['TM_FLEX_CONFIG'].nil?
+        return  proj_dir +'/' + ENV['TM_FLEX_CONFIG']
+      end
+      return nil
+    end
+    
     protected
     
     # Where we have Project Directory but no TM_FLEX_FILE_SPECS set take a look

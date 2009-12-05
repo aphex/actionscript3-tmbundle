@@ -23,6 +23,7 @@ module FlexMate
       cmd = MxmlcCommand.new
       cmd.file_specs = s.file_specs
       cmd.o = s.flex_output
+      cmd.flex_config = s.flex_config;
       
       init_html(bin,cmd)
       
@@ -52,7 +53,9 @@ module FlexMate
 
       puts "<h2>Building...</h2>"
       puts "<p><pre>-file-specs=#{cmd.file_specs}"
-      puts "-o=#{cmd.o}</pre></p>"      
+      puts "-o=#{cmd.o}"
+      puts "-load-config+=#{cmd.flex_config}"
+      puts "line: #{cmd.line}</pre></p>"      
       
     end
     
@@ -93,6 +96,7 @@ module FlexMate
       cmd = MxmlcCommand.new
       cmd.file_specs = ENV['TM_FLEX_FILE_SPECS']
       cmd.o = ENV['TM_FLEX_OUTPUT']
+      cmd.flex_config = s.flex_config
       
       fcsh = e_sh(ENV['TM_FLEX_PATH'] + '/bin/fcsh')
 
@@ -117,9 +121,10 @@ class MxmlcCommand
   
   attr_accessor :file_specs
   attr_accessor :o
-
+  attr_accessor :flex_config
+  
   def line
-    "mxmlc -file-specs=#{e_sh file_specs} -o=#{e_sh o}"
+    "mxmlc -file-specs=#{e_sh file_specs} -o=#{e_sh o} -load-config+=#{e_sh flex_config}"
   end
 
   def file_specs_name
