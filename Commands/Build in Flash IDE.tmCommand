@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string># assumes the .FLA file is already open
+
+#activates the Flash IDE
+osascript -e "
+tell application \"Adobe Flash CS4\"
+	activate
+end tell"
+
+#hackery to cause spaces to move to the flash window
+osascript -e "tell application \"System Events\" to key code 118";
+sleep .4;
+osascript -e "tell application \"System Events\" to key code 118";
+sleep .4;
+
+#create a JSFL to test the movie
+echo "flash.getDocumentDOM().testMovie()" &gt; /tmp/test.jsfl;
+
+#run the JSFL
+open /tmp/test.jsfl;</string>
+	<key>input</key>
+	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>@</string>
+	<key>name</key>
+	<string>Build in Flash IDE</string>
+	<key>output</key>
+	<string>discard</string>
+	<key>scope</key>
+	<string>source.actionscript.3, text.xml.mxml, text.xml.flex-config, comment.block.documentation.asdoc</string>
+	<key>uuid</key>
+	<string>ABABB214-3BF3-43B3-9E54-B43698FE3534</string>
+</dict>
+</plist>
