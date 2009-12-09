@@ -37,7 +37,7 @@
 				<key>name</key>
 				<string>TM_AS3_USUAL_SRC_DIRS</string>
 				<key>value</key>
-				<string>src:source:test:lib:AS3Lib</string>
+				<string>src:src_ext:source:test:lib:AS3Lib</string>
 			</dict>
 			<dict>
 				<key>comment</key>

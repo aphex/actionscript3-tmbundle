@@ -24,10 +24,8 @@ sub_class = File.basename(current_file,'.as')
 
 print "import #{path}.#{super_class};
 
-public class #{sub_class} extends #{super_class}
-{
-	public function #{sub_class}()
-	{
+public class #{sub_class} extends #{super_class} {
+	public function #{sub_class}() {
 		super();
 	}
 }"

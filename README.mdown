@@ -14,7 +14,7 @@ To install via Subversion:
 To install via Git:
 
 		cd ~/"Library/Application Support/TextMate/Bundles/"
-		git clone git://github.com/simongregory/actionscript3-tmbundle.git "ActionScript 3.tmbundle"
+		git clone git://github.com/aphex/actionscript3-tmbundle.git "ActionScript 3.tmbundle"
 		osascript -e 'tell app "TextMate" to reload bundles'
 
 Source can be viewed or forked via GitHub: [http://github.com/simongregory/actionscript3-tmbundle/tree/master](http://github.com/simongregory/actionscript3-tmbundle/tree/master)
@@ -34,7 +34,9 @@ Please use the TextMate Users mailing list [http://lists.macromates.com/listinfo
 Maintainer
 ----------
 
-[Simon Gregory](http://blog.simonregory.com)
+[Ross Gerbasi](http://www.rossgerbasi.com)
+
+Forked from : [Simon Gregory](http://blog.simongregory.com)
 
 License
 -------

@@ -4,58 +4,55 @@
 // 
 ////////////////////////////////////////////////////////////////////////////////
 
-package ${TM_CLASS_PATH}
-{
+package ${TM_CLASS_PATH} {
 
-/**
- * Error subclass.
- * 
- * @langversion ActionScript 3.0
- * @playerversion Flash 9.0
- * 
- * @author ${TM_FULLNAME}
- * @since  ${TM_DATE}
- */
-public class ${TM_NEW_FILE_BASENAME} extends Error
-{
-	
-	//--------------------------------------
-	// CLASS CONSTANTS
-	//--------------------------------------
-	
-	//--------------------------------------
-	//  CONSTRUCTOR
-	//--------------------------------------
-	
 	/**
-	 * @constructor
-	 * @param message The message that describes this error.
+	 * Error subclass.
+	 * 
+	 * @langversion ActionScript 3.0
+	 * @playerversion Flash 9.0
+	 * 
+	 * @author ${TM_FULLNAME}
+	 * @since  ${TM_DATE}
 	 */
-	public function ${TM_NEW_FILE_BASENAME}(message:String)
-	{
-		super(message);
-	}
+	public class ${TM_NEW_FILE_BASENAME} extends Error {
 	
-	//--------------------------------------
-	//  PRIVATE VARIABLES
-	//--------------------------------------
+		//--------------------------------------
+		// CLASS CONSTANTS
+		//--------------------------------------
 	
-	//--------------------------------------
-	//  GETTER/SETTERS
-	//--------------------------------------
+		//--------------------------------------
+		//  CONSTRUCTOR
+		//--------------------------------------
 	
-	//--------------------------------------
-	//  PUBLIC METHODS
-	//--------------------------------------
+		/**
+		 * @constructor
+		 * @param message The message that describes this error.
+		 */
+		public function ${TM_NEW_FILE_BASENAME}(message:String) {
+			super(message);
+		}
+	
+		//--------------------------------------
+		//  PRIVATE VARIABLES
+		//--------------------------------------
+	
+		//--------------------------------------
+		//  GETTER/SETTERS
+		//--------------------------------------
+	
+		//--------------------------------------
+		//  PUBLIC METHODS
+		//--------------------------------------
 
-	//--------------------------------------
-	//  EVENT HANDLERS
-	//--------------------------------------
+		//--------------------------------------
+		//  EVENT HANDLERS
+		//--------------------------------------
 	
-	//--------------------------------------
-	//  PRIVATE & PROTECTED INSTANCE METHODS
-	//--------------------------------------
+		//--------------------------------------
+		//  PRIVATE & PROTECTED INSTANCE METHODS
+		//--------------------------------------
 	
-}
+	}
 
 }
