@@ -14,7 +14,7 @@ currentLine   = ENV['TM_CURRENT_LINE']
 line_num = ENV['TM_LINE_NUMBER']
 line_idx = ENV['TM_LINE_INDEX']
 
-valid_check = var =  /^\s*(var)\s*([_a-z])/
+valid_check = var =  /^\s*(var)\s*\S/
 if(!currentLine.match(valid_check))
 	TextMate.exit_show_tool_tip("Invalid Line for Promotion")
 end
