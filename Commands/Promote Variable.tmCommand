@@ -14,6 +14,11 @@ currentLine   = ENV['TM_CURRENT_LINE']
 line_num = ENV['TM_LINE_NUMBER']
 line_idx = ENV['TM_LINE_INDEX']
 
+valid_check = var =  /^\s*(var)\s*([_a-z])/
+if(!currentLine.match(valid_check))
+	TextMate.exit_show_tool_tip("Invalid Line for Promotion")
+end
+
 #Attempt to find the variable name from the current line
 wordFinder = currentLine.split(":")[0];
 wordFinder = wordFinder.split("=")[0];
@@ -23,9 +28,6 @@ wordFinder = wordFinder.split("var ")
 # var varName:variableType = new VariableType()
 # var varName = new VariableType();
 # var varName
-# varName:variableType = new VariableType()
-# varName = new VariableType()
-# varName
 
 if(wordFinder[1])
 	word = wordFinder[1]
